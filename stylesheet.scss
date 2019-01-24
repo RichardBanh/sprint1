@@ -197,7 +197,6 @@ footer {
 
 .square {
     @include wrapper(1032px);
-    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -206,7 +205,6 @@ footer {
 
 .card {
     width: 240px;
-    height: 300px;
     position: relative;
 }
 
@@ -223,12 +221,12 @@ a{
     width: 100%;
     height: auto;
     margin-bottom: 40px;
-    margin-top: 24px;
 }
 
 .btm-wrapper {
     @include wrapper(1032px);
 }
+
 /*--- Responsive ---*/
 
 @media (min-width: 960px) and (max-width:1199px) {
