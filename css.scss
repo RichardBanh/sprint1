@@ -1,0 +1,288 @@
+* {
+    margin: 0px;
+    font-family: Avenir;
+}
+
+@font-face {
+    font-family: "Avenir";
+    src: url(./_GlobalFont/AvenirNextProLT/);
+}
+
+/*---Global---*/
+$color: rgb(53, 53, 53);
+$textcolor : #FFFFFF;
+$textsize1 : 65px;
+$textsize2 : 50px;
+
+@mixin wrapper ($max) {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: $max;
+}
+/*--- Header---*/
+
+.navigation {
+    background-color: $color;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    @include wrapper(1032px);
+
+    &  ul {
+        display: flex;
+        width: 175px;
+        justify-content: space-between;
+        text-decoration: none;
+        list-style: none;
+        align-content: center;
+        color : $textcolor;
+        margin-top: 33px;
+        margin-left: 25px;
+        box-sizing: border-box;
+    }
+
+    & img {
+        height: 24px;
+    }
+
+    & .active {
+        border-bottom: 4px solid whitesmoke;
+        padding-bottom: 21px;
+    }
+}
+
+ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 56px;
+}
+
+
+/*--- Hero---*/
+
+.hero {
+    height: 670px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include wrapper(1032px);
+}
+
+.hero .background {
+    top: 80px;
+    height: 670px;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    background-color: #323232;
+    opacity: .5;
+    z-index: 5;
+}
+
+
+.hero h1 {
+    width:670px;
+    font-size: $textsize1;
+    color: #FFFFFF;
+    z-index: 10;
+}
+
+.bckimg {
+    background-image: url(Images/hero.jpg);
+}
+
+/*--- About section---*/
+.aboutout {
+    @include wrapper(1032px);
+    margin-top: 48px;
+    font-size: $textsize2;
+    margin-bottom: 48px;
+}
+.about{
+    @include wrapper(900px);
+}
+
+.about h2 {
+    margin-top: 48px;
+    margin-bottom: 40px; 
+}
+
+.about h4 {
+    margin-bottom: 56px;
+}
+.about--special {
+    margin-bottom: 32px;
+
+}
+
+.about img {
+    width: 896px;
+    height: 450px;
+}
+
+.article-block {
+    display: flex;
+    box-sizing: border-box;
+    margin-bottom: 48px;
+
+    & :nth-child(2) {
+        padding-left: 40px;
+    }
+}
+
+/*--- Photo Gallery---*/
+.photobackground {
+    background-color: cornsilk;
+    padding-top: 48px;
+    padding-bottom: 40px;
+}
+section.photo{
+    @include wrapper(1032px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-grid {
+    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-grid img {
+    padding: 0 5px 10px 5px;
+    width: 344px;
+    height: 193px;
+    box-sizing: border-box;
+}
+
+.custom {
+    @include wrapper(1032px);
+}
+
+/*--- Footer---*/
+
+footer {
+    background-color: $color;
+    color: $textcolor;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 48px;
+}
+
+
+.getintouchline {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 56px;
+    @include wrapper(1032px);
+        img{
+            height: 17px;
+        }
+}
+
+.logos {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.square {
+    @include wrapper(1032px);
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card {
+    width: 240px;
+    height: 300px;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: $textcolor;
+    margin-top: 50px;
+}
+
+
+
+.copy {
+    @include wrapper(1032px);
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    margin-top: 24px;
+}
+
+.btm-wrapper {
+    @include wrapper(1032px);
+}
+/*--- Responsive ---*/
+
+@media (min-width: 960px) and (max-width:1199px) {
+    .about img {
+        width: 720px;
+        height: 362px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:959px) {
+    .about img {
+        width: 288px;
+        height: 145px;
+    }
+
+    ul li {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-left: 0px;
+        
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 767px){
+    nav {
+        flex-direction: column;
+
+        & ul {
+            padding: 0 0 0 0;
+            margin-left: 0;
+            position: relative;
+            left: -95px;
+        }
+
+        & img {
+            padding-top: 15px;
+        }
+    }
+
+    ul li {
+        padding: 0 32% 0 32%;
+        margin: 0 0 0 0;
+    }
+    .about img {
+        width: 288px;
+        height: 145px;
+    }
+
+    .hero .background {
+        top: 119px;
+    }
+
+    .article-block {
+        flex-wrap: wrap;
+    }
+}
