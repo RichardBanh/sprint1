@@ -30,6 +30,7 @@ nav {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 15px;
     @include wrapper(1032px);
 
     &  ul {
@@ -151,6 +152,8 @@ section.photo{
     margin-top: 64px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 
 .photo-grid img {
@@ -172,6 +175,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     padding-top: 48px;
+    padding-right: 30px;
 }
 
 
@@ -199,12 +203,12 @@ footer {
     @include wrapper(1032px);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
 }
 
 .card {
-    width: 240px;
+    width: 270px;
     position: relative;
 }
 
@@ -220,6 +224,7 @@ a{
     @include wrapper(1032px);
     width: 100%;
     height: auto;
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 
@@ -249,6 +254,11 @@ a{
         
     }
 
+    .about img {
+        width: 288px;
+        height: 145px;
+    }
+
 }
 
 @media (min-width: 0px) and (max-width: 767px){
@@ -272,8 +282,8 @@ a{
         margin: 0 0 0 0;
     }
     .about img {
-        width: 288px;
-        height: 145px;
+        width: 224px;
+        height: 126px;
     }
 
     .hero .background {
