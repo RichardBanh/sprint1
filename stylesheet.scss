@@ -11,8 +11,8 @@
 /*---Global---*/
 $color: rgb(53, 53, 53);
 $textcolor : #FFFFFF;
-$textsize1 : 65px;
-$textsize2 : 50px;
+$textsize1 : 4.063em;
+$textsize2 : 3.125em;
 
 @mixin wrapper ($max) {
     margin-left:auto;
@@ -25,29 +25,32 @@ $textsize2 : 50px;
     background-color: $color;
 }
 
-nav {
+.inner {
     display: flex;
     flex-wrap: wrap;
+    @include wrapper(1032px);
     justify-content: flex-start;
     align-items: center;
     padding-left: 30px;
-    @include wrapper(1032px);
 
+    & img {
+        height: 24px;
+    }
+}
+
+nav {
+    width: 320px;
     &  ul {
         display: flex;
-        width: 175px;
+        width: 100%;
         justify-content: space-between;
         text-decoration: none;
         list-style: none;
         align-content: center;
         color : $textcolor;
         margin-top: 33px;
-        margin-left: 25px;
         box-sizing: border-box;
-    }
-
-    & img {
-        height: 24px;
+        text-align: center;
     }
 
     & .active {
@@ -58,8 +61,8 @@ nav {
 
 ul li {
     padding-left: 10px;
+    width: 100%;
     padding-right: 10px;
-    margin-left: 56px;
 }
 
 
@@ -248,12 +251,6 @@ a{
         height: 145px;
     }
 
-    ul li {
-        padding-left: 25px;
-        padding-right: 25px;
-        margin-left: 0px;
-    }
-
     .about img {
         width: 288px;
         height: 145px;
@@ -261,31 +258,29 @@ a{
 
     .article-block {
         & :nth-child(2) {
-            padding-left: 0px;
+            padding-left: 10px;
+        }
+
+        & :nth-child(1) {
+            padding-left: 10px;
         }
     }
 
 }
 
 @media (min-width: 0px) and (max-width: 767px){
-    nav {
+    .inner {
         flex-direction: column;
 
         & ul {
             padding: 0 0 0 0;
             margin-left: 0;
-            position: relative;
-            left: -95px;
+            width: 320px;
         }
 
         & img {
             padding-top: 15px;
         }
-    }
-
-    ul li {
-        padding: 0 32% 0 32%;
-        margin: 0 0 0 0;
     }
     .about img {
         width: 224px;
@@ -302,8 +297,28 @@ a{
 
     .article-block {
         & :nth-child(2) {
-            padding-left: 0px;
+            padding-left: 10px;
             padding-top: 15px;
         }
+
+        & :nth-child(1) {
+            padding-left: 10px;
+        }
+    }
+}
+
+@media (max-width: 765px){
+    nav {
+        padding-left: 0px;
+        flex-direction: column;
+    
+    
+        & img {
+            height: 24px;
+            padding-bottom: 16px;
+        }
+
+        
+    
     }
 }
