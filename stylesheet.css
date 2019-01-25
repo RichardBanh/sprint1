@@ -26,7 +26,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 15px;
+  padding-left: 30px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1032px;
@@ -99,6 +99,7 @@ ul li {
   font-size: 65px;
   color: #FFFFFF;
   z-index: 10;
+  padding-left: 30px;
 }
 
 .bckimg {
@@ -113,6 +114,7 @@ ul li {
   margin-top: 48px;
   font-size: 50px;
   margin-bottom: 48px;
+  padding-left: 30px;
 }
 
 .about {
@@ -154,7 +156,7 @@ ul li {
 
 /*--- Photo Gallery---*/
 .photobackground {
-  background-color: cornsilk;
+  background-color: #FAFAFA;
   padding-top: 48px;
   padding-bottom: 40px;
 }
@@ -317,6 +319,9 @@ a {
     width: 288px;
     height: 145px;
   }
+  .article-block :nth-child(2) {
+    padding-left: 0px;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -349,6 +354,10 @@ a {
   .article-block {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .article-block :nth-child(2) {
+    padding-left: 0px;
+    padding-top: 15px;
   }
 }
 /*# sourceMappingURL=stylesheet.css.map */

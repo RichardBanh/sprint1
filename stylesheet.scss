@@ -30,7 +30,7 @@ nav {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 15px;
+    padding-left: 30px;
     @include wrapper(1032px);
 
     &  ul {
@@ -90,6 +90,7 @@ ul li {
     font-size: $textsize1;
     color: #FFFFFF;
     z-index: 10;
+    padding-left: 30px;
 }
 
 .bckimg {
@@ -102,6 +103,7 @@ ul li {
     margin-top: 48px;
     font-size: $textsize2;
     margin-bottom: 48px;
+    padding-left: 30px;
 }
 .about{
     @include wrapper(900px);
@@ -137,10 +139,11 @@ ul li {
 
 /*--- Photo Gallery---*/
 .photobackground {
-    background-color: cornsilk;
+    background-color: #FAFAFA;
     padding-top: 48px;
     padding-bottom: 40px;
 }
+
 section.photo{
     @include wrapper(1032px);
     display: flex;
@@ -218,8 +221,6 @@ a{
     margin-top: 50px;
 }
 
-
-
 .copy {
     @include wrapper(1032px);
     width: 100%;
@@ -251,12 +252,17 @@ a{
         padding-left: 25px;
         padding-right: 25px;
         margin-left: 0px;
-        
     }
 
     .about img {
         width: 288px;
         height: 145px;
+    }
+
+    .article-block {
+        & :nth-child(2) {
+            padding-left: 0px;
+        }
     }
 
 }
@@ -292,5 +298,12 @@ a{
 
     .article-block {
         flex-wrap: wrap;
+    }
+
+    .article-block {
+        & :nth-child(2) {
+            padding-left: 0px;
+            padding-top: 15px;
+        }
     }
 }
