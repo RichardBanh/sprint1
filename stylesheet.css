@@ -259,6 +259,10 @@ footer {
           align-items: baseline;
 }
 
+.block img {
+  padding-left: 15px;
+}
+
 .square {
   margin-left: auto;
   margin-right: auto;
@@ -275,7 +279,7 @@ footer {
 }
 
 .card {
-  width: 270px;
+  width: 246px;
   position: relative;
 }
 
@@ -311,22 +315,50 @@ a {
 
 @media (min-width: 768px) and (max-width: 959px) {
   .about img {
-    width: 288px;
-    height: 145px;
+    width: 720px;
+    height: 362px;
+    margin: 0 0 0 24px;
   }
-  .about img {
-    width: 288px;
-    height: 145px;
+  .about h2 {
+    padding-left: 24px;
+    padding-right: 24px;
   }
   .article-block :nth-child(2) {
     padding-left: 10px;
   }
   .article-block :nth-child(1) {
-    padding-left: 10px;
+    padding-left: 24px;
+  }
+  .block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+  footer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .about--special {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .about h4 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .custom {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .getintouchline {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
-@media (min-width: 0px) and (max-width: 767px) {
+@media (min-width: 400px) and (max-width: 767px) {
   .inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -341,9 +373,31 @@ a {
   .inner img {
     padding-top: 15px;
   }
-  .about img {
+  nav {
+    padding-left: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav img {
+    height: 24px;
+    padding-bottom: 16px;
+  }
+  .photo-grid img {
     width: 224px;
     height: 126px;
+  }
+  .about img {
+    width: 100%;
+    height: 75%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: auto 10% auto 10%;
+  }
+  .about h2 {
+    padding-left: 24px;
+    padding-right: 24px;
   }
   .hero .background {
     top: 119px;
@@ -359,19 +413,109 @@ a {
   .article-block :nth-child(1) {
     padding-left: 10px;
   }
+  footer {
+    padding-left: 30px;
+  }
 }
 
-@media (max-width: 765px) {
-  nav {
-    padding-left: 0px;
+@media (max-width: 450px) {
+  .about img {
+    width: 224px;
+    height: 126px;
+    margin-left: 45px;
+  }
+  .inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  nav img {
-    height: 24px;
-    padding-bottom: 16px;
+  .inner ul {
+    padding: 0 0 0 0;
+    margin-left: 0;
+    width: 320px;
+  }
+  .inner img {
+    padding-top: 15px;
+  }
+  .photo-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .photo-grid img {
+    width: 290px;
+  }
+  .article-block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .article-block :nth-child(2) {
+    padding-left: 10px;
+    padding-top: 15px;
+  }
+  .article-block :nth-child(1) {
+    padding-left: 10px;
+  }
+  .block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav {
+    margin-left: -50px;
+  }
+  .hero .background {
+    top: 119px;
+  }
+  .logos + img {
+    display: none;
+  }
+  .logos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 15px;
+  }
+  .getintouchline {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer {
+    padding-left: 10px;
+  }
+  .block img {
+    padding-left: 10px;
+    width: 20px;
+  }
+  .card {
+    margin-top: 30px;
+  }
+  .inner img {
+    margin-left: -20px;
+  }
+  .about h2, .about h4 {
+    padding-left: 30px;
+  }
+  .custom {
+    padding-left: 10px;
+  }
+  .hero .background {
+    height: 183px;
+  }
+  .bckimg {
+    height: 183px;
+    background-size: cover;
+  }
+  .hero h1 {
+    font-size: 2.3em;
+    margin-top: -500px;
+    width: 70%;
   }
 }
 /*# sourceMappingURL=stylesheet.css.map */
