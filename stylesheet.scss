@@ -7,6 +7,10 @@
     font-family: "Avenir";
     src: url(./_GlobalFont/AvenirNextProLT/);
 }
+/*---Reactive---*/
+ ul li:hover {
+    color-adjust: economy;
+}
 
 /*---Global---*/
 $color: rgb(53, 53, 53);
@@ -104,6 +108,9 @@ ul li {
 
 .bckimg {
     background-image: url(Images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /*--- About section---*/
@@ -427,7 +434,7 @@ a{
 
     .logos {
         flex-direction: row;
-        margin-top: 15px;
+        padding-top: 60px;
     }
 
     .getintouchline {
@@ -453,9 +460,13 @@ a{
 
     .about h2, .about h4 {
 
-        padding-left: 30px;
+        padding-left: 15px;
     }
 
+    .aboutout {
+        font-size: 2em;
+    }
+    
     .custom {
         padding-left: 10px;
     }
@@ -471,7 +482,7 @@ a{
     }
 
     .hero h1 {
-        font-size: 2.3em;
+        font-size: 2.0em;
         margin-top: -500px;
         width: 70%;
     }

@@ -8,6 +8,11 @@
   src: url(./_GlobalFont/AvenirNextProLT/);
 }
 
+/*---Reactive---*/
+ul li:hover {
+  color-adjust: economy;
+}
+
 /*---Global---*/
 /*--- Header---*/
 .navigation {
@@ -108,6 +113,9 @@ ul li {
 
 .bckimg {
   background-image: url(Images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /*--- About section---*/
@@ -478,7 +486,7 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-top: 15px;
+    padding-top: 60px;
   }
   .getintouchline {
     -webkit-box-orient: vertical;
@@ -500,7 +508,10 @@ a {
     margin-left: -20px;
   }
   .about h2, .about h4 {
-    padding-left: 30px;
+    padding-left: 15px;
+  }
+  .aboutout {
+    font-size: 2em;
   }
   .custom {
     padding-left: 10px;
@@ -513,7 +524,7 @@ a {
     background-size: cover;
   }
   .hero h1 {
-    font-size: 2.3em;
+    font-size: 2.0em;
     margin-top: -500px;
     width: 70%;
   }
