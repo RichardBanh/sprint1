@@ -9,8 +9,9 @@
 }
 
 /*---Reactive---*/
-ul li:hover {
-  color-adjust: economy;
+li:hover {
+  -webkit-transform: skew(-70deg);
+          transform: skew(-70deg);
 }
 
 /*---Global---*/
@@ -251,7 +252,7 @@ footer {
 }
 
 .getintouchline img {
-  height: 17px;
+  height: 25px;
 }
 
 .logos {
@@ -428,9 +429,8 @@ a {
 
 @media (max-width: 450px) {
   .about img {
-    width: 224px;
-    height: 126px;
-    margin-left: 45px;
+    width: 300px;
+    margin-left: 40px;
   }
   .inner {
     -webkit-box-orient: vertical;
