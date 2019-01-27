@@ -13,10 +13,19 @@
 }
 
 /*---Global---*/
-$color: rgb(53, 53, 53);
 $textcolor : #FFFFFF;
+$paragraph-color : #323232;
+$text-label-style : #AFAFAF;
+$text-field-border : #E1E1E1;
+$text-field-background : #FAFAFA;
+$primary-cta : #004892;
+$primary-cta-hover: #002F5F;
+$brainflix-primary-cta: #0095FF;
+$brainflix-primary-ctahover: #0065AD;
 $textsize1 : 4.063em;
 $textsize2 : 3.125em;
+
+
 
 @mixin wrapper ($max) {
     margin-left:auto;
@@ -32,7 +41,7 @@ $textsize2 : 3.125em;
 /*--- Header---*/
 
 .navigation {
-    background-color: $color;
+    background-color: $paragraph-color;
 }
 
 .inner {
@@ -189,7 +198,7 @@ section.photo{
 /*--- Footer---*/
 
 footer {
-    background-color: $color;
+    background-color: $paragraph-color;
     color: $textcolor;
     display: flex;
     flex-wrap: wrap;
@@ -379,8 +388,10 @@ a{
 @media (max-width: 450px) {
     .about img {
         width: 300px;
-        margin-left: 40px;
+        height: auto;
+        margin-left: 10px;
     }
+
     .inner {
         flex-direction: column;
 
@@ -433,7 +444,7 @@ a{
 
     .logos {
         flex-direction: row;
-        padding-top: 60px;
+        padding-top: 30px;
     }
 
     .getintouchline {
@@ -450,7 +461,7 @@ a{
     }
 
     .card {
-        margin-top: 30px;
+        margin-top: 0px;
     }
 
     .inner img{
@@ -458,16 +469,27 @@ a{
     }
 
     .about h2, .about h4 {
-
         padding-left: 15px;
+        margin-top: 20px;
+    }
+
+    .photo-grid {
+        margin-top:30px;
+    }
+
+    .about h4 {
+        margin-bottom:35px; 
     }
 
     .aboutout {
-        font-size: 2em;
+        font-size: 1.75em;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-left: -15px;
     }
     
     .custom {
-        padding-left: 10px;
+        padding-left: 20px;
     }
 
     .hero .background  {
