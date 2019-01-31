@@ -261,9 +261,9 @@ a{
 .btm-wrapper {
     @include wrapper(1032px);
 }
+/*--- Table ---*/
 
 /*--- Responsive ---*/
-
 @media (min-width: 960px) and (max-width:1199px) {
     .about img {
         width: 720px;

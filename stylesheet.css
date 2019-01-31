@@ -314,6 +314,7 @@ a {
   max-width: 1032px;
 }
 
+/*--- Table ---*/
 /*--- Responsive ---*/
 @media (min-width: 960px) and (max-width: 1199px) {
   .about img {
