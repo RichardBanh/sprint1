@@ -7,10 +7,7 @@
     font-family: "Avenir";
     src: url(./_GlobalFont/AvenirNextProLT/);
 }
-/*---Reactive---*/
- li:hover {
-    transform: skew(-70deg);
-}
+
 
 /*---Global---*/
 $textcolor : #FFFFFF;
@@ -51,10 +48,11 @@ $textsize2 : 3.125em;
     justify-content: flex-start;
     align-items: center;
     padding-left: 30px;
+}
 
-    & img {
-        height: 24px;
-    }
+.inner a {
+    height: 24px;
+    margin-top: 0px;
 }
 
 nav {
@@ -68,7 +66,6 @@ nav {
         align-content: center;
         color : $textcolor;
         margin-top: 33px;
-        box-sizing: border-box;
         text-align: center;
     }
 
@@ -126,10 +123,27 @@ ul li {
     background-image: url(Images/bandplay.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    
+}
+
+
+.boox {
+
+    h3 {
+        color: $text-field-background;
+        padding-bottom: 48px;
+    }
+
+    h1 {
+        padding-left: 0px;
+        width: 600px;
+        margin-right:64px;
+
+    }
 }
 
 /*--- About section---*/
+
 .aboutout {
     @include wrapper(1032px);
     margin-top: 48px;
@@ -149,6 +163,7 @@ ul li {
 .about h4 {
     margin-bottom: 56px;
 }
+
 .about--special {
     margin-bottom: 32px;
 
@@ -268,6 +283,120 @@ a{
 .btm-wrapper {
     @include wrapper(1032px);
 }
+/*--- Comment Section ---*/
+.comment-section {
+    width: 100%;
+}
+
+.comment-section h1 {
+    @include wrapper(1032px);
+    margin-top:48px;
+    font-size: 2.3em;
+}
+
+.text-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 56px;
+
+}
+
+.nameandphoto img {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    margin-top: 26px;
+    margin-right: 20px;
+
+}
+
+.nameandphoto {
+    display: flex;
+
+}
+
+#name {
+    width: 460px;
+    height: 48px;
+    border: 1px solid $text-field-border;
+    margin-bottom: 24px;
+    padding-left: 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+#comment {
+    width:460px;
+    height: 96px;
+    border: 1px solid $text-field-border;
+    padding-left: 16px;
+    padding-top: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+
+
+button.form {
+    margin-top: 24px;
+    margin-left: 305px;
+}
+
+form h4 {
+    margin-bottom: 8px;
+    color: #AFAFAF;
+}
+/*--- input form ---*/
+.blankimg {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #AFAFAF;
+    margin-right: 16px;
+}
+
+.commentpicture {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+#input-name {
+    width: 533px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+.comment {
+    width: 460px;
+    font-size: .9em;
+}
+
+.divbox {
+    display: flex;
+    justify-content: center;
+}
+
+.titlebox {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 13px;
+}
+
+.date {
+    margin-left: 10px;
+    color: #AFAFAF;
+    margin-top:4px; 
+}
+
+.name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
 
 /*--- Table ---*/
 .table-box {
@@ -275,24 +404,22 @@ a{
     margin-bottom: 25px;
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    margin-left: 250px;
-    margin-right: 180px;
-}
-.table {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-between;
+    @include wrapper(1032px)
 }
 
+
 table {
-    width: 100%;
-    padding-left: 200px;
     border-spacing: 0px;
+    width: 800px;
 }
 
 th, td {
     text-align: left;
+}
+
+td button{
+    float: right;
 }
 
 td {
@@ -313,7 +440,7 @@ tr:hover:not(.tr1) {background-color: #f5f5f5;}
 .dates {
     font-weight: bold;
 }
-td button {
+td button, button {
     height: 48px;
     width: 160px;
     border-radius: 4px;
@@ -424,7 +551,7 @@ button:hover {
     }
 
     .hero .background {
-        top: 119px;
+        top: 104px;
     }
 
     .article-block {
@@ -473,7 +600,8 @@ button:hover {
     }
 
     .photo-grid img {
-        width:290px;
+        width:280px;
+        height: 220px;
     }
     .article-block {
         flex-wrap: wrap;
@@ -497,7 +625,7 @@ button:hover {
     }
 
     .hero .background {
-        top: 119px;
+        top: 105px;
     }
 
     .logos + img {
@@ -570,4 +698,31 @@ button:hover {
         width: 70%;
     }
 
+}
+/*--- shows site ---*/
+
+@media (max-width: 1080px) {
+    .table-box {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    
+        h1 {
+            margin-left: -710px;
+        }
+    }
+
+    .bckimg1 .hero {
+        flex-direction: column;
+    }
+
+    .boox {
+        margin-top: 96px;
+    }
+
+    iframe {
+        margin-left: -220px;
+    }
+
+    
 }

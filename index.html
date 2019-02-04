@@ -6,16 +6,15 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css" />
-    
 </head>
 <body>
     <div class="navigation">
         <div class= "inner">
-            <img src="./Logo/Logo-bandsite.png" alt="logo">
+            <a href="./index.html"><img src="./Logo/Logo-bandsite.png" alt="logo"></a>
             <nav>
                 <ul>
                     <li class="active"><a href="#">Biography</a></li>
-                    <li><a href="#">Shows</a></li>
+                    <li><a href="./shows.html">Shows</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,6 +54,26 @@
                 <img src="Images/Photo-gallery-9.jpg" alt="">
             </div>
         </section>
+    </div>
+    <div class="comment-section">
+        <h1>Join the Conversation</h1>
+        <div class="text-box">
+            <div class="nameandphoto">
+                <img src="./Images/Mohan-muruge.jpg" alt="">
+                <form action="">
+                    <h4>NAME</h4>
+                    <input id="name" type="text" name="firstname">
+                    <h4>COMMENT</h4>
+                    <textarea id="comment" type="text" name="comment-section"></textarea>
+                    <br>
+                    <button class="form">COMMENT</button>
+                </form>
+            </div>
+        </div>
+        <div class="divbox">
+            <div id="input-name">
+            </div>
+        </div>
     </div>
     <footer>
         <div class="getintouchline">
@@ -98,5 +117,6 @@
             <div class="copy">Copyright The Bees Knees © 2018 All Rights Reserved</div>
         </div>
     </footer>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
