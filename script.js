@@ -68,6 +68,11 @@ button.addEventListener("click", function () {
   dateNode.innerHTML= today;
   nameNode.innerHTML= nameTextpull;
   commentNode.innerHTML = commentTextpull;
+
+  comments.date.push(today);
+  comments.name.push(nameTextpull);
+  comments.comment.push(commentTextpull);
+  
   titleDatebox.appendChild(nameNode);
   titleDatebox.appendChild(dateNode);
   commentTitle.appendChild(titleDatebox);
