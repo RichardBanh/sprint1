@@ -394,6 +394,11 @@ form h4 {
   color: #AFAFAF;
 }
 
+iframe {
+  width: 436px;
+  height: 146px;
+}
+
 /*--- input form ---*/
 .blankimg {
   width: 48px;
@@ -462,6 +467,7 @@ form h4 {
 .table-box {
   margin-top: 48px;
   margin-bottom: 25px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,7 +485,9 @@ form h4 {
 
 table {
   border-spacing: 0px;
-  width: 800px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 th, td {
@@ -637,11 +645,60 @@ button:hover {
   }
 }
 
+@media (max-width: 534px) {
+  #name {
+    width: 400px;
+  }
+  #comment {
+    width: 400px;
+  }
+  button.form {
+    margin-left: 0px;
+    width: 224px;
+  }
+  .comment {
+    width: 75%;
+  }
+  .commenttitle {
+    width: 250px;
+  }
+  .hero .boox.resize h1 {
+    font-size: 2.0em;
+    margin-right: 0px;
+    width: 400px;
+    margin-top: 30px;
+  }
+  .hero iframe {
+    margin-left: 0px;
+    margin-top: 60px;
+    width: 400px;
+    height: 120px;
+  }
+  .boox h3 {
+    width: 300px;
+    font-size: 1.25em;
+    padding-bottom: 0px;
+    margin-top: 64px;
+  }
+  .boox .resize {
+    margin-top: 64px;
+  }
+}
+
 @media (max-width: 450px) {
+  #name {
+    width: 224px;
+  }
+  #comment {
+    width: 224px;
+  }
   .about img {
     width: 300px;
     height: auto;
     margin-left: 10px;
+  }
+  .boox.resize {
+    margin-top: 0px;
   }
   .inner {
     -webkit-box-orient: vertical;
@@ -745,6 +802,14 @@ button:hover {
     height: 183px;
     background-size: cover;
   }
+  .bckimg1 {
+    height: 472px;
+    background-position: center;
+    background-size: cover;
+  }
+  .hero.column {
+    height: 437px;
+  }
   .hero h1 {
     font-size: 2.0em;
     margin-top: -500px;
@@ -767,9 +832,11 @@ button:hover {
             align-items: center;
   }
   .table-box h1 {
-    margin-left: -710px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
-  .bckimg1 .hero {
+  .column {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -780,6 +847,48 @@ button:hover {
   }
   iframe {
     margin-left: -220px;
+  }
+}
+
+@media (max-width: 690px) {
+  table {
+    display: none;
+  }
+  .table-box h1 {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+  }
+  .tableshow {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 16px;
+  }
+  .tableshow button {
+    width: 100%;
+  }
+  .tableshow h3 {
+    color: #AFAFAF;
+    margin-bottom: 16px;
+    font-size: 1.25em;
+    margin-top: 40px;
+  }
+  .tableshow h4 {
+    margin-bottom: 24px;
+    font-size: 1.25em;
+    font-weight: 400;
+  }
+  .tableshow .bold {
+    font-weight: bolder;
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 691px) {
+  .tableshow {
+    display: none;
   }
 }
 /*# sourceMappingURL=stylesheet.css.map */

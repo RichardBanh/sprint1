@@ -20,7 +20,7 @@ function commentdom(name, date, comment) {
   var step1 = document.createElement('div');
   step1.setAttribute('class', 'commentpicture');
   step1.innerHTML = `<div class= "blankimg"></div><div class="commenttitle"><div class="titlebox"><div class="name">${name}</div><div class="date">${date}</div></div><div class="comment">${comment}</div></div>`;
-  document.getElementById('input-name').appendChild(step1);
+  return document.getElementById('input-name').appendChild(step1);
 }
 
 function forloopforcommentarray() {
