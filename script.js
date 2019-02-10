@@ -1,32 +1,39 @@
-const comments = [
-  {
-    name: 'Micheal Lyons',
-    date: '12/18/2018',
-    comment: 'They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.',
-  },
-  {
-    name: 'Gary Wong',
-    date: '12/12/2018',
-    comment: 'Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!', 
-  },
-  {
-    name: 'Theodore Duncan',
-    date: '11/15/2018',
-    comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!',
-  },
-]
+const dakey = '?api_key=1000ca6c-8bcb-46e6-a3bf-09212ef44e2c';
+const urlcomments = `https://project-1-api.herokuapp.com/comments${dakey}`;
+const showdates = `https://project-1-api.herokuapp.com/showdates${dakey}`
+
+
+function commentget(){
+  return axios.get(urlcomments)
+  .then(response => {
+  const comments2 = response.data
+  console.log(comments2)
+  for (var i = comments2.length -1 ; i >= 0; i--) {
+    const date = new Date(comments2[i].timestamp)
+      const year = date.getFullYear()
+      const month = date.getMonth() + 1
+      const day = date.getDate()
+      const formatdate = `${month}/${day}/${year}`
+    var name = comments2[i].name 
+    var comment = comments2[i].comment
+    var step1 = document.createElement('div');
+    step1.setAttribute('class', 'commentpicture');
+    step1.innerHTML = `<div class= "blankimg"></div><div class="commenttitle"><div class="titlebox"><div class="name">${name}</div><div class="date">${formatdate}</div></div><div class="comment">${comment}</div></div>`;
+    document.getElementById('input-name').appendChild(step1);
+    
+  }
+  }
+  )
+}
+
 
 function commentdom(name, date, comment) {
   var step1 = document.createElement('div');
+  var where = document.getElementById('input-name');
   step1.setAttribute('class', 'commentpicture');
   step1.innerHTML = `<div class= "blankimg"></div><div class="commenttitle"><div class="titlebox"><div class="name">${name}</div><div class="date">${date}</div></div><div class="comment">${comment}</div></div>`;
-  return document.getElementById('input-name').appendChild(step1);
-}
-
-function forloopforcommentarray() {
-  for (var i = 0; i < comments.length; i++) {
-    commentdom(comments[i].name, comments[i].date, comments[i].comment)
-  }
+  
+  return where.insertBefore(step1, where.firstChild);
 }
 
 //got from stackoverflow
@@ -40,10 +47,15 @@ today = mm + '/' + dd + '/' + yyyy;
 var button = document.querySelector('button')
 button.addEventListener("click", function () {
   event.preventDefault();
+  var form = document.querySelector('form');
   var nameTextpull = document.getElementById('name').value;
   var commentTextpull = document.getElementById('comment').value;
+  axios.post(urlcomments, {
+    name: nameTextpull,
+    comment: commentTextpull
+  })
   commentdom(nameTextpull, today, commentTextpull);
+  form.reset();
 })
 
-
-window.onload = forloopforcommentarray;
+commentget();
